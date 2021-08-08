@@ -11,7 +11,7 @@ formData.addEventListener('submit',(e)=>{
     paraOne.textContent = "Loding..."
     paraTwo.textContent = ''
     
-    fetch('http://localhost:3000/weather?address='+Location).then((response)=>{
+    fetch('/weather?address='+Location).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             paraOne.textContent = data.error
